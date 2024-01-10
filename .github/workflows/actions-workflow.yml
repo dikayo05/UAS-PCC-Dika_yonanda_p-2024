@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Build and tag docker image
         run: |
-          docker build -t ${{secrets.USERNAME}}/UAS-PCC-Dika_yonanda_p-2024:latest -f Dockerfile .
+          docker build -t ${{secrets.USERNAME}}/uas-pcc-dika_yonanda_p-2024:latest -f Dockerfile .
       - name: Push to Dockerhub
         run: docker login -u ${{secrets.USERNAME}} -p ${{secrets.ACCESS_TOKEN}} && docker push ${{secrets.USERNAME}}/UAS-PCC-Dika_yonanda_p-2024:latest
